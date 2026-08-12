@@ -2,8 +2,9 @@
   --color-bg-cream: #FBF3E7;
   --color-bg-peach: #F7E4CC;
   --color-text-dark: #4A342A;
-  --color-text-muted: #8A6A56;
+  --color-text-muted: #7A5A46;
   --color-accent: #D9714B;
+  --color-accent-strong: #B4502C;
   --color-glow: rgba(217, 119, 87, 0.35);
   --color-footer-text: #C9AF9B;
   --color-footer-link: #E8CBB0;
@@ -46,7 +47,7 @@ section {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-accent);
+  outline: 3px solid var(--color-accent-strong);
   outline-offset: 3px;
 }
 
@@ -54,7 +55,7 @@ section {
   display: inline-block;
   padding: 14px 28px;
   border-radius: 999px;
-  background: var(--color-accent);
+  background: var(--color-accent-strong);
   color: var(--color-bg-cream);
   font-family: var(--font-body);
   font-weight: 700;
@@ -116,7 +117,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-size: 13px;
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   margin-bottom: 12px;
 }
 
@@ -217,7 +218,7 @@ section {
 .method-card h3 {
   font-size: 20px;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
 }
 
 .method-card p {
@@ -294,7 +295,7 @@ section {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--color-accent);
+  background: var(--color-accent-strong);
   color: var(--color-bg-cream);
   font-family: var(--font-display);
   font-weight: 600;
@@ -334,7 +335,7 @@ section {
   font-family: var(--font-display);
   font-size: 32px;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   margin-bottom: 28px;
 }
 
@@ -375,7 +376,7 @@ section {
 
 .faq-list summary::after {
   content: '+';
-  color: var(--color-accent);
+  color: var(--color-accent-strong);
   font-family: var(--font-display);
 }
 
