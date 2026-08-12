@@ -262,3 +262,53 @@ section {
   }
   .about-photo { margin: 0 auto; }
 }
+
+#journey {
+  background: var(--color-bg-peach);
+}
+
+#journey h2 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.journey-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 24px;
+  counter-reset: none;
+}
+
+.journey-list li {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.journey-number {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-bg-cream);
+  font-family: var(--font-display);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.journey-list h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.journey-list p {
+  color: var(--color-text-muted);
+  margin: 0;
+}
