@@ -5,6 +5,8 @@
   --color-text-muted: #8A6A56;
   --color-accent: #D9714B;
   --color-glow: rgba(217, 119, 87, 0.35);
+  --color-footer-text: #C9AF9B;
+  --color-footer-link: #E8CBB0;
   --font-display: 'Fraunces', serif;
   --font-body: 'Karla', sans-serif;
   --max-width: 1080px;
@@ -406,9 +408,9 @@ section {
   text-align: center;
   padding: 24px;
   font-size: 13px;
-  color: #C9AF9B;
+  color: var(--color-footer-text);
 }
 
 .site-footer a {
-  color: #E8CBB0;
+  color: var(--color-footer-link);
 }
