@@ -45,4 +45,37 @@
       });
     });
   }
+
+  // Reels: match the "coming soon" placeholder heights to the real Instagram
+  // embed's full height, so the post shows completely (no internal scrollbar)
+  // and all three cards line up. Instagram's embed.js replaces the blockquote
+  // with an iframe asynchronously, so this polls for that iframe to appear
+  // before measuring, instead of measuring the placeholder blockquote's height.
+  var reelEmbed = document.querySelector('.reel-embed');
+  var reelPlaceholders = document.querySelectorAll('.reel-placeholder');
+
+  if (reelEmbed && reelPlaceholders.length && window.matchMedia('(min-width: 861px)').matches) {
+    var applyReelHeight = function () {
+      var height = reelEmbed.offsetHeight;
+      if (height > 0) {
+        reelPlaceholders.forEach(function (el) { el.style.height = height + 'px'; });
+      }
+    };
+
+    var attempts = 0;
+    var maxAttempts = 40; // ~10s at 250ms
+    var pollId = setInterval(function () {
+      attempts++;
+      var isReady = reelEmbed.querySelector('iframe');
+      if (isReady || attempts >= maxAttempts) {
+        clearInterval(pollId);
+        // The iframe reports a placeholder height first, then Instagram resizes
+        // it to fit the real post a moment later; wait for that to settle.
+        setTimeout(applyReelHeight, 400);
+        setTimeout(applyReelHeight, 1200);
+      }
+    }, 250);
+
+    window.addEventListener('resize', applyReelHeight);
+  }
 })();
