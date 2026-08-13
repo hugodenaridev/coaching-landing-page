@@ -516,11 +516,18 @@ section { padding: 88px 24px; }
 
 /* No background/size of our own here: the Instagram embed already renders as a
    white rounded card at its own natural size, styling this wrapper the same way
-   just produced a bigger, mismatched card behind it. */
+   just produced a bigger, mismatched card behind it. Both this and
+   .reel-placeholder are pinned to the same fixed height (rather than relying on
+   CSS Grid to stretch them to match) because Instagram's embed.js swaps the
+   blockquote for an iframe asynchronously, after the grid has already sized
+   itself, so stretch-to-tallest-item does not track that later resize. */
 .reel-embed {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   overflow-x: auto;
+  overflow-y: auto;
+  height: 580px;
 }
 
 .reel-embed .instagram-media { margin: 0 auto !important; }
@@ -529,7 +536,7 @@ section { padding: 88px 24px; }
   background: var(--color-cream);
   border: 1.5px dashed var(--color-sand);
   border-radius: 16px;
-  min-height: 400px;
+  height: 580px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -542,7 +549,8 @@ section { padding: 88px 24px; }
 
 @media (max-width: 860px) {
   .reels-grid { grid-template-columns: 1fr; }
-  .reel-embed, .reel-placeholder { min-height: 320px; }
+  .reel-embed { height: auto; }
+  .reel-placeholder { height: 320px; }
 }
 
 /* ---------- Offer / pricing ---------- */
