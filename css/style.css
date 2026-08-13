@@ -522,14 +522,20 @@ section { padding: 88px 24px; }
    swapping the blockquote for an iframe, and applies it to the placeholders,
    since that swap happens asynchronously, after the grid has already sized
    itself once. The min-height below is only the pre-JS/no-JS fallback. */
+/* Instagram's embed never stretches to fill the column (it has its own fixed
+   natural width), so centering it here left uneven empty space on each side,
+   on top of the real 20px grid gap, making the gap next to this card look
+   bigger than the gap between the two placeholder cards. Right-aligning it
+   instead puts all of that leftover space on the left of this card, where
+   there is no neighboring card for it to visually compete with. */
 .reel-embed {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   min-height: 400px;
 }
 
-.reel-embed .instagram-media { margin: 0 auto !important; }
+.reel-embed .instagram-media { margin: 0 !important; }
 
 .reel-placeholder {
   background: var(--color-cream);
@@ -548,7 +554,7 @@ section { padding: 88px 24px; }
 
 @media (max-width: 860px) {
   .reels-grid { grid-template-columns: 1fr; }
-  .reel-embed { min-height: 0; }
+  .reel-embed { min-height: 0; justify-content: center; }
   .reel-placeholder { min-height: 320px; }
 }
 
