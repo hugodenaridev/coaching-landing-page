@@ -514,11 +514,13 @@ section { padding: 88px 24px; }
   margin-right: auto;
 }
 
+/* No background/size of our own here: the Instagram embed already renders as a
+   white rounded card at its own natural size, styling this wrapper the same way
+   just produced a bigger, mismatched card behind it. */
 .reel-embed {
-  background: var(--color-white);
-  border-radius: 16px;
+  display: flex;
+  justify-content: center;
   overflow-x: auto;
-  min-height: 400px;
 }
 
 .reel-embed .instagram-media { margin: 0 auto !important; }
