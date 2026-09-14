@@ -46,36 +46,51 @@
     });
   }
 
-  // Reels: match the "coming soon" placeholder heights to the real Instagram
-  // embed's full height, so the post shows completely (no internal scrollbar)
-  // and all three cards line up. Instagram's embed.js replaces the blockquote
-  // with an iframe asynchronously, so this polls for that iframe to appear
-  // before measuring, instead of measuring the placeholder blockquote's height.
-  var reelEmbed = document.querySelector('.reel-embed');
-  var reelPlaceholders = document.querySelectorAll('.reel-placeholder');
+  // Sticky mobile CTA bar.
+  //
+  // It stays out of the way in the two places where it would only add noise:
+  // over the hero (the hero has its own primary CTA right there) and over the
+  // closing CTA section (which is the same action, full size). Everywhere in
+  // between, the bar is the always-reachable path to WhatsApp.
+  //
+  // The element starts with the `hidden` attribute so that, without JS, it never
+  // appears stuck on screen with no way to dismiss it.
+  var stickyCta = document.getElementById('sticky-cta');
+  var hero = document.getElementById('hero');
+  var finalCta = document.getElementById('final-cta');
 
-  if (reelEmbed && reelPlaceholders.length && window.matchMedia('(min-width: 861px)').matches) {
-    var applyReelHeight = function () {
-      var height = reelEmbed.offsetHeight;
-      if (height > 0) {
-        reelPlaceholders.forEach(function (el) { el.style.height = height + 'px'; });
+  if (stickyCta && hero && 'IntersectionObserver' in window) {
+    var heroVisible = true;
+    var finalVisible = false;
+
+    var syncStickyCta = function () {
+      var shouldShow = !heroVisible && !finalVisible;
+
+      // `hidden` is kept in sync with the class so the bar is also out of the
+      // accessibility tree and the tab order while it is off screen.
+      if (shouldShow) {
+        stickyCta.hidden = false;
+        document.body.classList.add('has-sticky-cta');
+        // Next frame, so the slide-up transition has a starting point to
+        // animate from instead of appearing already in place.
+        requestAnimationFrame(function () { stickyCta.classList.add('is-visible'); });
+      } else {
+        stickyCta.classList.remove('is-visible');
+        stickyCta.hidden = true;
+        document.body.classList.remove('has-sticky-cta');
       }
     };
 
-    var attempts = 0;
-    var maxAttempts = 40; // ~10s at 250ms
-    var pollId = setInterval(function () {
-      attempts++;
-      var isReady = reelEmbed.querySelector('iframe');
-      if (isReady || attempts >= maxAttempts) {
-        clearInterval(pollId);
-        // The iframe reports a placeholder height first, then Instagram resizes
-        // it to fit the real post a moment later; wait for that to settle.
-        setTimeout(applyReelHeight, 400);
-        setTimeout(applyReelHeight, 1200);
-      }
-    }, 250);
+    new IntersectionObserver(function (entries) {
+      heroVisible = entries[0].isIntersecting;
+      syncStickyCta();
+    }, { threshold: 0 }).observe(hero);
 
-    window.addEventListener('resize', applyReelHeight);
+    if (finalCta) {
+      new IntersectionObserver(function (entries) {
+        finalVisible = entries[0].isIntersecting;
+        syncStickyCta();
+      }, { threshold: 0 }).observe(finalCta);
+    }
   }
 })();
