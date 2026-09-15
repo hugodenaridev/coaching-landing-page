@@ -1,24 +1,26 @@
 (function () {
-  // Scroll reveal
+  // ---------- Scroll reveal ----------
   var revealTargets = document.querySelectorAll('[data-reveal]');
 
   if ('IntersectionObserver' in window && revealTargets.length) {
-    var observer = new IntersectionObserver(function (entries) {
+    var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
 
-    revealTargets.forEach(function (el) { observer.observe(el); });
+    revealTargets.forEach(function (el) { revealObserver.observe(el); });
   } else {
     revealTargets.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  // WhatsApp CTA links (hrefs are already set statically in HTML; this keeps them
-  // correct even if a data-message attribute is edited without touching the href).
+  // ---------- CTAs de WhatsApp ----------
+  // Os hrefs já vêm prontos no HTML (a página precisa funcionar sem JS); isto
+  // apenas os mantém corretos caso um data-message seja editado sem que o href
+  // correspondente seja atualizado junto.
   var WHATSAPP_NUMBER = '5512997304566';
 
   document.querySelectorAll('.js-whatsapp-cta').forEach(function (link) {
@@ -28,7 +30,7 @@
     link.rel = 'noopener noreferrer';
   });
 
-  // Mobile nav toggle
+  // ---------- Menu mobile ----------
   var navToggle = document.querySelector('.nav-toggle');
   var primaryNav = document.getElementById('primary-nav');
 
@@ -46,51 +48,29 @@
     });
   }
 
-  // Sticky mobile CTA bar.
+  // ---------- Botão flutuante de WhatsApp ----------
   //
-  // It stays out of the way in the two places where it would only add noise:
-  // over the hero (the hero has its own primary CTA right there) and over the
-  // closing CTA section (which is the same action, full size). Everywhere in
-  // between, the bar is the always-reachable path to WhatsApp.
-  //
-  // The element starts with the `hidden` attribute so that, without JS, it never
-  // appears stuck on screen with no way to dismiss it.
-  var stickyCta = document.getElementById('sticky-cta');
+  // Fica escondido enquanto a hero está na tela — ali o CTA principal já está
+  // logo ali e o botão só competiria com ele. Passada a hero, aparece e segue
+  // disponível até o fim da página.
+  var waFloat = document.getElementById('wa-float');
   var hero = document.getElementById('hero');
-  var finalCta = document.getElementById('final-cta');
 
-  if (stickyCta && hero && 'IntersectionObserver' in window) {
-    var heroVisible = true;
-    var finalVisible = false;
-
-    var syncStickyCta = function () {
-      var shouldShow = !heroVisible && !finalVisible;
-
-      // `hidden` is kept in sync with the class so the bar is also out of the
-      // accessibility tree and the tab order while it is off screen.
-      if (shouldShow) {
-        stickyCta.hidden = false;
-        document.body.classList.add('has-sticky-cta');
-        // Next frame, so the slide-up transition has a starting point to
-        // animate from instead of appearing already in place.
-        requestAnimationFrame(function () { stickyCta.classList.add('is-visible'); });
-      } else {
-        stickyCta.classList.remove('is-visible');
-        stickyCta.hidden = true;
-        document.body.classList.remove('has-sticky-cta');
-      }
-    };
-
+  if (waFloat && hero && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) {
-      heroVisible = entries[0].isIntersecting;
-      syncStickyCta();
-    }, { threshold: 0 }).observe(hero);
-
-    if (finalCta) {
-      new IntersectionObserver(function (entries) {
-        finalVisible = entries[0].isIntersecting;
-        syncStickyCta();
-      }, { threshold: 0 }).observe(finalCta);
-    }
+      if (entries[0].isIntersecting) {
+        waFloat.classList.remove('is-visible');
+        waFloat.hidden = true;
+      } else {
+        waFloat.hidden = false;
+        // No quadro seguinte, para a transição ter de onde animar em vez de já
+        // aparecer no lugar final.
+        requestAnimationFrame(function () { waFloat.classList.add('is-visible'); });
+      }
+    }, { threshold: 0, rootMargin: '-120px 0px 0px 0px' }).observe(hero);
+  } else if (waFloat) {
+    // Sem IntersectionObserver, é melhor o botão existir sempre do que nunca.
+    waFloat.hidden = false;
+    waFloat.classList.add('is-visible');
   }
 })();

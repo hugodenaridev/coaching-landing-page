@@ -1,365 +1,297 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <script>document.documentElement.classList.add('js');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ágatha Vidal | Coaching de Inteligência Emocional</title>
-  <meta name="description" content="Clareza, hábitos consistentes e uma vida com propósito. Coaching de inteligência emocional com método CIS (Febracis) e base em neurociência. Comece por uma conversa gratuita, sem compromisso.">
+  <meta name="description" content="Clareza, hábitos consistentes e uma vida com propósito. Coaching de inteligência emocional com base em neurociência. Comece por uma conversa gratuita, sem compromisso.">
   <link rel="canonical" href="https://hugodenaridev.github.io/coaching-landing-page/">
-  <meta name="theme-color" content="#FFF6E6">
+  <meta name="theme-color" content="#EFE9DF">
 
-  <!-- Open Graph / Twitter: definem como o link aparece quando é compartilhado no
-       WhatsApp, Instagram e redes sociais. Sem isso o preview sai em branco, o que
-       derruba muito o clique no link da bio. -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Ágatha Vidal">
   <meta property="og:url" content="https://hugodenaridev.github.io/coaching-landing-page/">
   <meta property="og:title" content="Ágatha Vidal | Transforme sua mente. Construa uma vida com propósito.">
-  <meta property="og:description" content="Coaching de inteligência emocional que une neurociência, método CIS e fé. Comece por uma conversa gratuita, sem compromisso.">
+  <meta property="og:description" content="Coaching de inteligência emocional que une neurociência, prática e fé. Comece por uma conversa gratuita, sem compromisso.">
   <meta property="og:image" content="https://hugodenaridev.github.io/coaching-landing-page/assets/hero-photo.jpg">
   <meta property="og:image:alt" content="Ágatha Vidal, mentora de transformação">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ágatha Vidal | Transforme sua mente. Construa uma vida com propósito.">
-  <meta name="twitter:description" content="Coaching de inteligência emocional que une neurociência, método CIS e fé. Comece por uma conversa gratuita, sem compromisso.">
+  <meta name="twitter:description" content="Coaching de inteligência emocional que une neurociência, prática e fé. Comece por uma conversa gratuita, sem compromisso.">
   <meta name="twitter:image" content="https://hugodenaridev.github.io/coaching-landing-page/assets/hero-photo.jpg">
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%232B2B2B'/%3E%3Cpath d='M4 20C4 12 10 4 20 4C20 12 14 20 4 20Z' stroke='%23F7C948' stroke-width='1.6' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
+  <!-- Header claro e fixo o tempo inteiro, como na referência: não troca de
+       estado no scroll, o que dá uma sensação mais estável e editorial. -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="#hero" class="logo">
-        <svg class="logo-leaf" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20C4 12 10 4 20 4C20 12 14 20 4 20Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M4 20C8 16 12 12 20 4" stroke="currentColor" stroke-width="1.4"/></svg>
-        <span>Ágatha Vidal</span>
+      <a href="#hero" class="logo" aria-label="Ágatha Vidal, início">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1" opacity=".45"/>
+            <path d="M20 44C20 30 28 19 45 19C45 33 37 44 20 44Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M20 44C27 37 34 31 45 19" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <strong>Ágatha Vidal</strong>
+          <small>Coaching &amp; Mentoria</small>
+        </span>
       </a>
+
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu">
         <span></span><span></span><span></span>
       </button>
+
       <nav class="primary-nav" id="primary-nav">
+        <a href="#hero" class="is-current">Home</a>
         <a href="#about">Sobre mim</a>
-        <a href="#audience">Para quem é</a>
-        <a href="#journey">Como funciona</a>
+        <a href="#audience">Atendimento</a>
         <a href="#offer">Investimento</a>
-        <a href="#faq">FAQ</a>
-        <a href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Vi%20sua%20p%C3%A1gina%20e%20quero%20agendar%20minha%20conversa%20gratuita." class="cta-button cta-button--nav js-whatsapp-cta" data-message="Oi Agatha! Vi sua página e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Conversa gratuita</a>
+        <a href="#faq">Dúvidas</a>
+        <a class="nav-cta js-whatsapp-cta" href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Vi%20sua%20p%C3%A1gina%20e%20quero%20agendar%20minha%20conversa%20gratuita." data-message="Oi Agatha! Vi sua página e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Conversa gratuita</a>
       </nav>
+
+      <div class="header-social">
+        <a href="https://www.instagram.com/euagathavidal" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+        </a>
+        <a href="https://wa.me/5512997304566" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2.5c-5.2 0-9.42 4.22-9.42 9.41 0 1.66.44 3.28 1.26 4.7L2.5 21.5l5.04-1.32a9.4 9.4 0 004.5 1.15h.01c5.19 0 9.41-4.22 9.41-9.42 0-5.19-4.22-9.41-9.42-9.41zm5.5 13.46c-.23.65-1.35 1.25-1.85 1.29-.48.04-.93.21-3.14-.66-2.64-1.04-4.32-3.75-4.45-3.92-.13-.17-1.06-1.42-1.06-2.7 0-1.29.67-1.92.91-2.18.24-.26.52-.33.69-.33h.5c.16 0 .38-.6.59.45.23.54.76 1.87.83 2 .07.14.11.3.02.47-.09.17-.13.28-.26.43l-.4.46c-.13.13-.27.28-.12.54.15.27.68 1.11 1.45 1.8 1 .89 1.84 1.17 2.1 1.3.26.13.42.11.57-.07.16-.18.66-.76.83-1.03.18-.26.35-.22.59-.13.24.09 1.52.72 1.78.85.26.13.43.2.5.31.07.11.07.63-.16 1.27z"/></svg>
+        </a>
+      </div>
     </div>
   </header>
 
   <main id="main">
+    <!-- ---------- HERO sangrado ---------- -->
     <section id="hero">
-      <div class="section-inner hero-inner" data-reveal>
-        <div class="hero-copy">
-          <p class="eyebrow">Mente &middot; Hábitos &middot; Fé &middot; Execução</p>
-          <h1>Transforme sua mente. Construa uma vida com <em>propósito.</em></h1>
-          <p class="hero-subhead">Coaching de inteligência emocional para mulheres que querem clareza sobre quem são, hábitos que se sustentam e coragem para executar. Une neurociência, método CIS e fé.</p>
-          <div class="hero-ctas">
-            <a href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Vi%20sua%20p%C3%A1gina%20e%20quero%20agendar%20minha%20conversa%20gratuita." class="cta-button cta-button--lg js-whatsapp-cta" data-message="Oi Agatha! Vi sua página e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Agendar conversa gratuita</a>
-            <a href="#journey" class="cta-ghost">Ver como funciona <span aria-hidden="true">&darr;</span></a>
-          </div>
-          <p class="cta-micro">Sem compromisso &middot; A conversa acontece pelo WhatsApp &middot; Atendimento online e presencial</p>
-          <ul class="hero-trust">
-            <li>Pós em Neurociência aplicada</li>
-            <li>Coach Integral Sistêmico &mdash; Febracis</li>
-          </ul>
+      <img class="hero-bg" src="assets/hero-photo.jpg" alt="" width="2400" height="1350" fetchpriority="high" aria-hidden="true">
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-left">
+          <h1>
+            <span class="h1-pre">Ágatha</span>
+            <span class="h1-main">Vidal</span>
+          </h1>
+          <p class="hero-craft">Coaching &amp; Mentoria</p>
         </div>
-        <div class="hero-media">
-          <!-- width/height = dimensões reais do arquivo, para reservar espaço antes
-               do CSS carregar. ATENÇÃO: este JPG tem só 300x430 e é exibido a ~526px
-               de largura, então aparece ampliado e sem nitidez. Trocar pelo original
-               em alta (mínimo 1100px de largura) quando a Ágatha enviar. -->
-          <img src="assets/hero-photo.jpg" alt="Ágatha Vidal, mentora de transformação" class="hero-photo" width="300" height="430" fetchpriority="high">
-          <blockquote class="hero-quote">
-            <p>Estou plantando hoje a vida que quero colher amanhã, enquanto busco viver tudo aquilo que <strong>Deus sonhou</strong> para mim.</p>
-          </blockquote>
-        </div>
-      </div>
-      <div class="section-inner hero-pillars" data-reveal>
-        <div class="pillar">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20C4 12 10 4 20 4C20 12 14 20 4 20Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M4 20C8 16 12 12 20 4" stroke="currentColor" stroke-width="1.4"/></svg>
-          <span>Base científica e espiritual</span>
-        </div>
-        <div class="pillar">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 3C6 3 4 5.5 4 8.5C4 10 4.6 11 5.4 11.8C4.6 12.4 4 13.3 4 14.5C4 16.5 5.5 18 7.5 18H8V21H16V18H16.5C18.5 18 20 16.5 20 14.5C20 13.3 19.4 12.4 18.6 11.8C19.4 11 20 10 20 8.5C20 5.5 18 3 15 3C13.8 3 12.8 3.5 12 4.2C11.2 3.5 10.2 3 9 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
-          <span>Clareza mental e emocional</span>
-        </div>
-        <div class="pillar">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="0.9" fill="currentColor"/></svg>
-          <span>Execução com consistência</span>
-        </div>
-        <div class="pillar">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20C12 20 4 15 4 9.5C4 6.5 6.2 4.5 8.8 4.5C10.2 4.5 11.4 5.2 12 6.2C12.6 5.2 13.8 4.5 15.2 4.5C17.8 4.5 20 6.5 20 9.5C20 15 12 20 12 20Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
-          <span>Transformação com propósito</span>
+        <div class="hero-right">
+          <p class="hero-spec">Inteligência Emocional<br>e Alta Performance</p>
+          <p class="hero-place">Online e presencial</p>
+          <a class="btn btn--gold js-whatsapp-cta" href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Vi%20sua%20p%C3%A1gina%20e%20quero%20agendar%20minha%20conversa%20gratuita." data-message="Oi Agatha! Vi sua página e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Agendar conversa gratuita</a>
+          <p class="hero-micro">Sem compromisso</p>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="section-inner about-inner" data-reveal>
+    <!-- ---------- Declaração + método nomeado ---------- -->
+    <section id="pillars" class="band band--soft">
+      <div class="wrap narrow center" data-reveal>
+        <p class="over">O processo</p>
+        <p class="statement">Clareza. Hábitos. Execução.</p>
+        <p class="statement-sub">São os <em>3 pilares</em> de um processo que realmente transforma!</p>
+
+        <div class="lines">
+          <p>Uma mente que enxerga com nitidez.</p>
+          <p>Sem limitações que você nem sabia que carregava.</p>
+          <p>Uma vida que funciona a seu favor.</p>
+        </div>
+
+        <a class="btn btn--dark js-whatsapp-cta" href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Quero%20saber%20mais%20sobre%20o%20processo%20e%20agendar%20minha%20conversa%20gratuita." data-message="Oi Agatha! Quero saber mais sobre o processo e agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Quero saber mais</a>
+      </div>
+    </section>
+
+    <!-- ---------- Sintomas ---------- -->
+    <section id="symptoms" class="band">
+      <div class="wrap" data-reveal>
+        <p class="over center">Você como prioridade</p>
+        <h2 class="center">Quando a vida <em>funciona</em><br>mas alguma coisa ainda falta</h2>
+        <div class="sym-grid">
+          <span>Sensação de estar sempre correndo e nunca chegando</span>
+          <span>Clareza que some na hora de decidir</span>
+          <span>Hábitos que começam na segunda e morrem na quarta</span>
+          <span>Procrastinação que não é preguiça</span>
+          <span>Vida pessoal, profissional e espiritual puxando para lados diferentes</span>
+          <span>A certeza de que dá para viver com mais leveza e propósito</span>
+        </div>
+        <div class="center cta-row">
+          <a class="btn btn--dark js-whatsapp-cta" href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Me%20reconheci%20na%20sua%20p%C3%A1gina%20e%20quero%20agendar%20minha%20conversa%20gratuita." data-message="Oi Agatha! Me reconheci na sua página e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Agendar conversa gratuita</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Frase assinada ---------- -->
+    <section id="motto" class="band band--soft">
+      <div class="wrap narrow center" data-reveal>
+        <blockquote class="motto">
+          <p>“Método, acompanhamento e verdade.<br>Cuidar da mente é cuidar de quem você é.”</p>
+          <cite>Ágatha Vidal</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ---------- Atendimento: cards com curva ---------- -->
+    <section id="audience" class="band">
+      <div class="wrap" data-reveal>
+        <p class="over center">Atendimento</p>
+        <h2 class="center">Conheço o seu problema</h2>
+        <p class="lead center">E vou te ajudar a entender tudo o que está acontecendo — e a construir um caminho que caiba na sua vida real.</p>
+
+        <div class="curve-grid">
+          <article class="curve-card">
+            <img src="assets/card-clareza.jpg" alt="" width="760" height="570" loading="lazy" aria-hidden="true">
+            <div class="curve-body">
+              <h3>Clareza e Identidade</h3>
+              <p>Para quem sente que decide no automático e quer entender quem é, o que quer e onde quer chegar antes de dar o próximo passo.</p>
+            </div>
+          </article>
+          <article class="curve-card">
+            <img src="assets/card-habitos.jpg" alt="" width="760" height="570" loading="lazy" aria-hidden="true">
+            <div class="curve-body">
+              <h3>Hábitos e Execução</h3>
+              <p>Para quem já sabe o que precisa fazer e trava na hora de sustentar. Construímos rotina que não depende de motivação.</p>
+            </div>
+          </article>
+          <article class="curve-card">
+            <img src="assets/card-proposito.jpg" alt="" width="760" height="570" loading="lazy" aria-hidden="true">
+            <div class="curve-body">
+              <h3>Propósito e Fé</h3>
+              <p>Para quem busca alinhar vida pessoal, profissional e espiritual sem que uma área precise ser sacrificada pela outra.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- Sobre ---------- -->
+    <section id="about" class="band band--soft">
+      <div class="wrap about-grid" data-reveal>
         <div class="about-media">
-          <!-- Arquivo original tem apenas 138x155 e é exibido a ~442px aqui (e a ~691px
-               no #final-cta): é a imagem mais ampliada da página. Substituir em alta. -->
-          <img src="assets/about-photo.jpg" alt="Ágatha Vidal escrevendo em seu caderno" class="about-photo" width="138" height="155" loading="lazy">
+          <img src="assets/about-photo.jpg" alt="Ágatha Vidal" width="760" height="1013" loading="lazy">
         </div>
-        <div class="about-copy">
-          <p class="eyebrow">Sobre mim</p>
-          <h2>De engenheira a mentora de transformação</h2>
-          <p>Sou formada em Engenharia e pós-graduada em Neurociência aplicada ao comportamento humano. Durante anos, atuei no mundo corporativo até entender que meu verdadeiro chamado era ajudar pessoas a transformarem sua mente, seus hábitos e sua vida.</p>
-          <p>Estudei profundamente sobre o funcionamento do cérebro, mente, hábitos e comportamento humano e me formei em Coaching Integral Sistêmico, unindo ciência, prática e fé para ajudar mulheres que desejam viver com clareza, identidade e propósito.</p>
-          <p class="about-signature">Minha missão é te ajudar a te tornares a mulher que Deus sonhou, de dentro para fora.</p>
-          <div class="credential-grid">
-            <div class="credential-card">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4L21 8.5L12 13L3 8.5L12 4Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 11V16C7 17.5 9 19 12 19C15 19 17 17.5 17 16V11" stroke="currentColor" stroke-width="1.4"/></svg>
-              <h3>Engenheira</h3>
-              <p>Formação sólida que me ensinou estrutura, análise e resolução de problemas.</p>
-            </div>
-            <div class="credential-card">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 3C6 3 4 5.5 4 8.5C4 10 4.6 11 5.4 11.8C4.6 12.4 4 13.3 4 14.5C4 16.5 5.5 18 7.5 18H8V21H16V18H16.5C18.5 18 20 16.5 20 14.5C20 13.3 19.4 12.4 18.6 11.8C19.4 11 20 10 20 8.5C20 5.5 18 3 15 3C13.8 3 12.8 3.5 12 4.2C11.2 3.5 10.2 3 9 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
-              <h3>Pós em Neurociência</h3>
-              <p>Entendimento profundo sobre mente, emoções e comportamento humano.</p>
-            </div>
-            <div class="credential-card">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4.4" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="0.9" fill="currentColor"/></svg>
-              <h3>Coaching Integral Sistêmico</h3>
-              <p>Formação completa (Febracis, método Paulo Vieira) para acompanhar processos de transformação com profundidade.</p>
-            </div>
-            <div class="credential-card">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20C12 20 4 15 4 9.5C4 6.5 6.2 4.5 8.8 4.5C10.2 4.5 11.4 5.2 12 6.2C12.6 5.2 13.8 4.5 15.2 4.5C17.8 4.5 20 6.5 20 9.5C20 15 12 20 12 20Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
-              <h3>Cristã</h3>
-              <p>Minha fé em Deus é a base que sustenta todo o meu trabalho e propósito.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="audience">
-      <div class="section-inner audience-inner" data-reveal>
-        <div class="audience-copy">
-          <p class="eyebrow">Para quem é</p>
-          <h2>Para mulheres que sabem que podem mais.</h2>
-          <p class="audience-lead">Você não precisa estar em crise para querer mais clareza. Se algum destes pontos é você hoje, o processo foi desenhado exatamente para isso:</p>
-          <ul class="check-list">
-            <li>Que desejam clareza sobre quem são e onde querem chegar</li>
-            <li>Que querem criar hábitos consistentes e vencer a procrastinação</li>
-            <li>Que buscam equilíbrio entre vida pessoal, profissional e espiritual</li>
-            <li>Que desejam viver com mais leveza, propósito e realização</li>
+        <div>
+          <p class="over">Sobre mim</p>
+          <h2>A visão da mente <em>como um todo</em></h2>
+          <p>Sou formada em Engenharia e pós-graduada em Neurociência aplicada ao comportamento humano. Durante anos atuei no mundo corporativo, até entender que meu verdadeiro chamado era ajudar pessoas a transformarem sua mente, seus hábitos e sua vida.</p>
+          <p>Estudei profundamente o funcionamento do cérebro, da mente, dos hábitos e do comportamento humano, e me formei em Coaching Integral Sistêmico — unindo ciência, prática e fé para ajudar mulheres que desejam viver com clareza, identidade e propósito.</p>
+          <ul class="creds">
+            <li><strong>Engenheira</strong> Estrutura, análise e resolução de problemas.</li>
+            <li><strong>Pós em Neurociência</strong> Mente, emoções e comportamento humano.</li>
+            <li><strong>Coach Integral Sistêmico</strong> Formação Febracis, método Paulo Vieira.</li>
+            <li><strong>Cristã</strong> A fé é a base que sustenta todo o trabalho.</li>
           </ul>
-          <div class="inline-cta">
-            <a href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Me%20reconheci%20na%20sua%20p%C3%A1gina%20e%20quero%20agendar%20minha%20conversa%20gratuita." class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Me reconheci na sua página e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Me reconheci. Quero conversar</a>
-            <span class="cta-micro">Conversa gratuita, sem compromisso</span>
-          </div>
-        </div>
-        <div class="audience-media">
-          <img src="assets/lifestyle-photo.jpg" alt="Caderno com anotações sobre clareza, processo, consistência e propósito" class="audience-photo" width="210" height="163" loading="lazy">
-          <blockquote class="audience-quote">
-            <p>Pequenas escolhas de <strong>hoje</strong> constroem sua melhor versão de amanhã.</p>
-          </blockquote>
         </div>
       </div>
     </section>
 
-    <section id="journey">
-      <div class="section-inner" data-reveal>
-        <p class="eyebrow centered">Como funciona</p>
-        <h2 class="centered">Um caminho claro, do diagnóstico à transformação.</h2>
-        <p class="section-lead centered">Nada de conversa solta: cada encontro tem objetivo, ferramenta e próximo passo definidos.</p>
-        <ol class="journey-list">
-          <li>
-            <span class="journey-number">1</span>
-            <h3>Diagnóstico</h3>
-            <p>Entendo sua história, desafios e objetivos.</p>
-          </li>
-          <li>
-            <span class="journey-number">2</span>
-            <h3>Plano personalizado</h3>
-            <p>Criamos um plano claro e estratégico para você.</p>
-          </li>
-          <li>
-            <span class="journey-number">3</span>
-            <h3>Mentoria &amp; Coaching</h3>
-            <p>Encontros profundos para gerar clareza e ação.</p>
-          </li>
-          <li>
-            <span class="journey-number">4</span>
-            <h3>Implementação</h3>
-            <p>Colocamos em prática com consistência.</p>
-          </li>
-          <li>
-            <span class="journey-number">5</span>
-            <h3>Transformação</h3>
-            <p>Você colhe os frutos da nova mentalidade.</p>
-          </li>
-        </ol>
-        <div class="inline-cta centered-cta">
-          <a href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Quero%20entender%20como%20o%20processo%20funcionaria%20para%20o%20meu%20caso." class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Quero entender como o processo funcionaria para o meu caso." target="_blank" rel="noopener noreferrer">Quero entender meu caso</a>
-          <span class="cta-micro">O primeiro passo é uma conversa gratuita</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="reels">
-      <div class="section-inner" data-reveal>
-        <p class="eyebrow centered">Instagram</p>
-        <h2 class="centered">Veja meu conteúdo antes de decidir</h2>
-        <p class="reels-intro">Reflexões sobre mente, hábitos, fé e propósito. É a forma mais honesta de sentir se a minha abordagem faz sentido para você.</p>
-        <!-- Cards próprios em vez do embed oficial do Instagram: três embeds seriam
-             três iframes de terceiros carregando na página. Aqui a miniatura é local
-             (a URL do CDN do Instagram é assinada e expira) e o card leva ao reel.
-             Reels escolhidos por engajamento — ver docs/reels.md para atualizar. -->
-        <div class="reels-grid">
-          <a class="reel-card" href="https://www.instagram.com/reel/DdEmNSosbtA/" target="_blank" rel="noopener noreferrer">
-            <span class="reel-thumb">
-              <img src="assets/reels/DdEmNSosbtA.jpg" alt="Reel sobre crenças limitantes: a história do Wayne" width="360" height="640" loading="lazy">
-              <span class="reel-play" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M9 7.5L17 12L9 16.5V7.5Z" fill="currentColor"/></svg>
-              </span>
-            </span>
-            <span class="reel-hook">O que mais me chamou atenção na história do Wayne foi descobrir que ele tinha motivos reais para acreditar que era azarado.</span>
-            <span class="reel-link">Ver no Instagram <span aria-hidden="true">&rarr;</span></span>
-          </a>
-          <a class="reel-card" href="https://www.instagram.com/reel/DcwkWg1Ra-m/" target="_blank" rel="noopener noreferrer">
-            <span class="reel-thumb">
-              <img src="assets/reels/DcwkWg1Ra-m.jpg" alt="Reel sobre neuroplasticidade e falar em público" width="360" height="640" loading="lazy">
-              <span class="reel-play" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M9 7.5L17 12L9 16.5V7.5Z" fill="currentColor"/></svg>
-              </span>
-            </span>
-            <span class="reel-hook">Falar em público era difícil para ele. Então ele começou a repetir uma nova direção &mdash; e a neuroplasticidade explica por quê.</span>
-            <span class="reel-link">Ver no Instagram <span aria-hidden="true">&rarr;</span></span>
-          </a>
-          <a class="reel-card" href="https://www.instagram.com/reel/DcmIriLw_rb/" target="_blank" rel="noopener noreferrer">
-            <span class="reel-thumb">
-              <img src="assets/reels/DcmIriLw_rb.jpg" alt="Reel sobre a batalha da mente: medo, ansiedade e distração" width="360" height="640" loading="lazy">
-              <span class="reel-play" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M9 7.5L17 12L9 16.5V7.5Z" fill="currentColor"/></svg>
-              </span>
-            </span>
-            <span class="reel-hook">Medo, ansiedade, distração. A Bíblia mostra que existe uma batalha acontecendo também na mente.</span>
-            <span class="reel-link">Ver no Instagram <span aria-hidden="true">&rarr;</span></span>
-          </a>
-        </div>
-        <div class="reels-follow">
-          <a href="https://www.instagram.com/euagathavidal" target="_blank" rel="noopener noreferrer" class="cta-button cta-button--ghost">Seguir @euagathavidal</a>
-        </div>
-      </div>
-    </section>
-
+    <!-- ---------- Depoimentos sobre foto ---------- -->
     <section id="testimonials">
-      <div class="section-inner" data-reveal>
-        <p class="eyebrow centered">O que dizem sobre o processo</p>
+      <img class="tst-bg" src="assets/testimonials-bg.jpg" alt="" width="1500" height="844" loading="lazy" aria-hidden="true">
+      <div class="tst-veil" aria-hidden="true"></div>
+      <div class="wrap tst-content" data-reveal>
+        <h2 class="tst-title">Depoimentos</h2>
         <!-- Depoimentos de exemplo, criados a pedido da Agatha para uso interno/teste. Trocar pelo texto real de clientes antes de publicar o site. -->
-        <div class="testimonial-grid">
-          <blockquote class="testimonial-card">
-            <p>"As sessões me ajudaram a ter clareza sobre quem eu sou, o que eu quero e como chegar lá. Hoje me sinto mais confiante e em paz comigo mesma."</p>
-            <cite>— L.S.</cite>
+        <div class="tst-grid">
+          <blockquote>
+            <p>As sessões me ajudaram a ter clareza sobre quem eu sou, o que eu quero e como chegar lá. Hoje me sinto mais confiante e em paz comigo mesma.</p>
+            <cite>L. S.</cite>
           </blockquote>
-          <blockquote class="testimonial-card">
-            <p>"A mentoria da Ágatha é profunda, prática e transformadora. Ela une fé, ciência e ferramentas que realmente funcionam."</p>
-            <cite>— M.A.</cite>
+          <blockquote>
+            <p>A mentoria da Ágatha é profunda, prática e transformadora. Ela une fé, ciência e ferramentas que realmente funcionam.</p>
+            <cite>M. A.</cite>
           </blockquote>
-          <blockquote class="testimonial-card">
-            <p>"Foi o melhor investimento que já fiz em mim. Minha mentalidade mudou e isso se refletiu em todas as áreas da minha vida."</p>
-            <cite>— B.P.</cite>
+          <blockquote>
+            <p>Foi o melhor investimento que já fiz em mim. Minha mentalidade mudou e isso se refletiu em todas as áreas da minha vida.</p>
+            <cite>B. P.</cite>
           </blockquote>
         </div>
       </div>
     </section>
 
-    <section id="offer">
-      <div class="section-inner" data-reveal>
-        <p class="eyebrow centered">Comece por aqui</p>
-        <h2 class="centered">O primeiro passo não custa nada.</h2>
+    <!-- ---------- Investimento ---------- -->
+    <section id="offer" class="band band--soft">
+      <div class="wrap" data-reveal>
+        <p class="over center">Comece por aqui</p>
+        <h2 class="center">O primeiro passo <em>não custa nada</em></h2>
 
         <div class="first-step">
-          <div class="first-step-copy">
+          <div>
             <h3>Conversa gratuita, sem compromisso</h3>
             <p>Antes de qualquer investimento, conversamos. Eu entendo o seu momento, você entende como o processo funciona, e só então decidimos juntas se faz sentido seguir. Se não fizer, você sai com clareza mesmo assim.</p>
           </div>
-          <div class="first-step-action">
-            <a href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Quero%20agendar%20minha%20conversa%20gratuita." class="cta-button cta-button--lg js-whatsapp-cta" data-message="Oi Agatha! Quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Agendar minha conversa</a>
-            <span class="cta-micro">Direto no WhatsApp &middot; Online ou presencial</span>
+          <div class="first-step-cta">
+            <a class="btn btn--gold js-whatsapp-cta" href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Quero%20agendar%20minha%20conversa%20gratuita." data-message="Oi Agatha! Quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Agendar minha conversa</a>
+            <p class="hero-micro">Direto no WhatsApp</p>
           </div>
         </div>
 
-        <p class="eyebrow centered offer-eyebrow">Investimento</p>
-        <h2 class="centered">Transparência total sobre o processo completo.</h2>
-        <p class="section-lead centered">O acompanhamento é um pacote fechado de 12 sessões, porque transformação real não acontece em um encontro isolado. Estes são os valores:</p>
+        <p class="over center sep">Investimento</p>
+        <h2 class="center">Transparência total</h2>
+        <p class="lead center">O acompanhamento é um pacote fechado de 12 sessões, porque transformação real não acontece em um encontro isolado.</p>
 
-        <div class="offer-grid">
-          <div class="pricing-card">
-            <div class="pricing-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.4"/><path d="M5 20C5 16 8 13.5 12 13.5C16 13.5 19 16 19 20" stroke="currentColor" stroke-width="1.4"/></svg>
-            </div>
+        <div class="plans">
+          <div class="plan">
             <h3>Presencial</h3>
-            <p class="pricing-detail">Encontros presenciais</p>
-            <p class="pricing-value">R$ 600<span>por sessão</span></p>
-            <ul class="pricing-list">
+            <p class="plan-sub">Encontros presenciais</p>
+            <p class="plan-price">R$ 600 <span>/ sessão</span></p>
+            <ul>
               <li>Pacote de 12 sessões</li>
-              <li>Duração de 1h30 por sessão</li>
+              <li>1h30 por sessão</li>
               <li>Acompanhamento personalizado</li>
-              <li>Ferramentas práticas para sua transformação</li>
+              <li>Ferramentas práticas</li>
               <li>Ambiente seguro e confidencial</li>
             </ul>
-            <p class="pricing-total">Investimento total: <strong>R$ 7.200,00</strong><span>12 sessões &middot; até 12x no cartão</span></p>
-            <p class="pricing-cash">À vista: <strong>R$ 6.840,00</strong> <span>(5% de desconto)</span></p>
-            <a href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Quero%20saber%20mais%20sobre%20o%20coaching%20presencial%20e%20agendar%20minha%20conversa%20gratuita." class="cta-button cta-button--ghost js-whatsapp-cta" data-message="Oi Agatha! Quero saber mais sobre o coaching presencial e agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Quero o presencial</a>
+            <p class="plan-total">Total <strong>R$ 7.200,00</strong> <span>em até 12x</span></p>
+            <p class="plan-cash">À vista <strong>R$ 6.840,00</strong> <span>(5% off)</span></p>
+            <a class="btn btn--ghost btn--block js-whatsapp-cta" href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Quero%20saber%20mais%20sobre%20o%20coaching%20presencial%20e%20agendar%20minha%20conversa%20gratuita." data-message="Oi Agatha! Quero saber mais sobre o coaching presencial e agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Quero o presencial</a>
           </div>
-          <div class="pricing-card pricing-card--highlight">
-            <span class="pricing-badge">Menor investimento</span>
-            <div class="pricing-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="11" rx="1.2" stroke="currentColor" stroke-width="1.4"/><path d="M9 20H15" stroke="currentColor" stroke-width="1.4"/><path d="M12 16V20" stroke="currentColor" stroke-width="1.4"/></svg>
-            </div>
+          <div class="plan plan--main">
+            <span class="plan-flag">Menor investimento</span>
             <h3>Online</h3>
-            <p class="pricing-detail">Encontros por videochamada, de onde você estiver</p>
-            <p class="pricing-value">R$ 545<span>por sessão</span></p>
-            <ul class="pricing-list">
+            <p class="plan-sub">Videochamada, de onde você estiver</p>
+            <p class="plan-price">R$ 545 <span>/ sessão</span></p>
+            <ul>
               <li>Pacote de 12 sessões</li>
-              <li>Duração de 1h30 por sessão</li>
+              <li>1h30 por sessão</li>
               <li>Acompanhamento personalizado</li>
-              <li>Ferramentas práticas para sua transformação</li>
+              <li>Ferramentas práticas</li>
               <li>Ambiente seguro e confidencial</li>
             </ul>
-            <p class="pricing-total">Investimento total: <strong>R$ 6.540,00</strong><span>12 sessões &middot; até 12x no cartão</span></p>
-            <p class="pricing-cash">À vista: <strong>R$ 6.213,00</strong> <span>(5% de desconto)</span></p>
-            <a href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Quero%20saber%20mais%20sobre%20o%20coaching%20online%20e%20agendar%20minha%20conversa%20gratuita." class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Quero saber mais sobre o coaching online e agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Quero o online</a>
-          </div>
-          <div class="offer-side">
-            <div class="payment-panel">
-              <h3>Formas de pagamento</h3>
-              <ul>
-                <li><strong>À vista</strong><span>5% de desconto</span></li>
-                <li><strong>Cartão de crédito</strong><span>até 12x</span></li>
-                <li><strong>Processo seguro</strong><span>e sigiloso</span></li>
-              </ul>
-            </div>
-            <div class="cta-panel">
-              <p>Ainda em dúvida?</p>
-              <p class="cta-panel-sub">Não precisa decidir agora. Comece pela conversa gratuita e tire todas as dúvidas.</p>
-              <a href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Tenho%20algumas%20d%C3%BAvidas%20sobre%20o%20processo%20e%20quero%20agendar%20minha%20conversa%20gratuita." class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Tenho algumas dúvidas sobre o processo e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Tirar minhas dúvidas</a>
-            </div>
+            <p class="plan-total">Total <strong>R$ 6.540,00</strong> <span>em até 12x</span></p>
+            <p class="plan-cash">À vista <strong>R$ 6.213,00</strong> <span>(5% off)</span></p>
+            <a class="btn btn--gold btn--block js-whatsapp-cta" href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Quero%20saber%20mais%20sobre%20o%20coaching%20online%20e%20agendar%20minha%20conversa%20gratuita." data-message="Oi Agatha! Quero saber mais sobre o coaching online e agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Quero o online</a>
           </div>
         </div>
+
+        <p class="pay-line">À vista com 5% de desconto &middot; Cartão em até 12x &middot; Processo seguro e sigiloso</p>
       </div>
     </section>
 
-    <section id="faq">
-      <div class="section-inner" data-reveal>
-        <p class="eyebrow centered">Perguntas frequentes</p>
-        <h2 class="centered">Provavelmente você está se perguntando...</h2>
+    <!-- ---------- FAQ com foto ---------- -->
+    <section id="faq" class="band">
+      <div class="wrap faq-grid" data-reveal>
+        <div class="faq-head">
+          <h2 class="faq-title">Alguma dúvida?</h2>
+          <div class="faq-photo">
+            <img src="assets/faq-photo.jpg" alt="Ágatha Vidal" width="700" height="875" loading="lazy">
+          </div>
+        </div>
         <div class="faq-list">
           <details>
             <summary>O investimento é alto. Como saber se vale a pena para mim?</summary>
-            <p>É exatamente para isso que existe a conversa gratuita. Nela eu entendo o seu momento e te digo com honestidade se o processo faz sentido agora. Prefiro que você invista com clareza do que por impulso, e é por isso que o valor está aqui na página, aberto, antes de qualquer conversa.</p>
+            <p>É exatamente para isso que existe a conversa gratuita. Nela eu entendo o seu momento e te digo com honestidade se o processo faz sentido agora. Prefiro que você invista com clareza do que por impulso — e é por isso que o valor está aqui na página, aberto, antes de qualquer conversa.</p>
           </details>
           <details>
             <summary>Por que o pacote mínimo é de 12 sessões?</summary>
@@ -371,15 +303,11 @@
           </details>
           <details>
             <summary>Preciso ser cristã para fazer o processo?</summary>
-            <p>Não. A fé é a base que sustenta o meu trabalho e eu não escondo isso, mas as ferramentas que aplico vêm da neurociência e do método CIS e funcionam independente da sua crença. Respeito o seu caminho e conduzo o processo no ponto em que você está.</p>
+            <p>Não. A fé é a base que sustenta o meu trabalho e eu não escondo isso, mas as ferramentas que aplico vêm da neurociência e do coaching, e funcionam independente da sua crença. Respeito o seu caminho e conduzo o processo no ponto em que você está.</p>
           </details>
           <details>
             <summary>Não sei se vou ter tempo. Como funciona na prática?</summary>
             <p>São encontros de 1h30, combinados de acordo com a sua agenda, no formato online ou presencial. Entre as sessões existem práticas para aplicar no seu dia a dia — feitas para caber na sua rotina, não para virar mais uma cobrança.</p>
-          </details>
-          <details>
-            <summary>As sessões são realmente online?</summary>
-            <p>Sim, todas as sessões da modalidade online acontecem por videochamada, então você pode participar de onde estiver. Também atendo no formato presencial.</p>
           </details>
           <details>
             <summary>Como faço para agendar?</summary>
@@ -389,47 +317,39 @@
       </div>
     </section>
 
-    <section id="final-cta">
-      <div class="section-inner final-cta-inner" data-reveal>
-        <img src="assets/about-photo.jpg" alt="" class="final-cta-photo" aria-hidden="true" loading="lazy">
-        <div class="final-cta-copy">
-          <h2>Vamos caminhar juntas?</h2>
-          <p>Transformação é uma decisão &mdash; e a primeira não custa nada. Me manda uma mensagem e vamos conversar sobre o seu momento, sem compromisso.</p>
-          <a href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Terminei%20de%20ver%20sua%20p%C3%A1gina%20e%20quero%20agendar%20minha%20conversa%20gratuita." class="cta-button cta-button--lg js-whatsapp-cta" data-message="Oi Agatha! Terminei de ver sua página e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Agendar conversa gratuita</a>
-          <span class="cta-micro cta-micro--dark">Resposta pelo WhatsApp &middot; Online ou presencial</span>
-        </div>
+    <!-- ---------- CTA final ---------- -->
+    <section id="final-cta" class="band band--dark">
+      <div class="wrap narrow center" data-reveal>
+        <p class="over over--light">Vamos começar?</p>
+        <h2 class="final-title">Transformação é uma <em>decisão</em></h2>
+        <p class="lead lead--light">E a primeira não custa nada. Me manda uma mensagem e vamos conversar sobre o seu momento.</p>
+        <a class="btn btn--gold js-whatsapp-cta" href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Terminei%20de%20ver%20sua%20p%C3%A1gina%20e%20quero%20agendar%20minha%20conversa%20gratuita." data-message="Oi Agatha! Terminei de ver sua página e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Agendar conversa gratuita</a>
+        <p class="hero-micro hero-micro--light">Resposta pelo WhatsApp &middot; Online ou presencial</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
+    <div class="wrap footer-inner">
+      <div>
         <span class="footer-logo">Ágatha Vidal</span>
-        <span class="footer-tagline">Plante hoje. Colha amanhã.</span>
+        <span class="footer-tag">Plante hoje. Colha amanhã.</span>
       </div>
       <div class="footer-social">
         <a href="https://www.instagram.com/euagathavidal" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
         </a>
         <a href="https://wa.me/5512997304566" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5C7.3 3.5 3.5 7.3 3.5 12C3.5 13.6 4 15.1 4.8 16.4L3.5 20.5L7.7 19.2C8.9 19.9 10.4 20.3 12 20.3C16.7 20.3 20.5 16.5 20.5 11.8C20.5 7.1 16.7 3.5 12 3.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3.5C7.3 3.5 3.5 7.3 3.5 12C3.5 13.6 4 15.1 4.8 16.4L3.5 20.5L7.7 19.2C8.9 19.9 10.4 20.3 12 20.3C16.7 20.3 20.5 16.5 20.5 11.8C20.5 7.1 16.7 3.5 12 3.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
         </a>
       </div>
-      <p class="footer-copyright">Todos os direitos reservados &copy; 2026 Ágatha Vidal</p>
+      <p class="footer-copy">&copy; 2026 Ágatha Vidal &middot; Todos os direitos reservados</p>
     </div>
   </footer>
 
-  <!-- Barra fixa de CTA no mobile: mantém a ação principal sempre ao alcance do
-       polegar, onde está a maior parte do tráfego vindo do Instagram. Aparece só
-       depois que a pessoa passa da hero, para não cobrir a primeira impressão. -->
-  <div class="sticky-cta" id="sticky-cta" hidden>
-    <div class="sticky-cta-text">
-      <strong>Conversa gratuita</strong>
-      <span>Sem compromisso</span>
-    </div>
-    <a href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Vi%20sua%20p%C3%A1gina%20e%20quero%20agendar%20minha%20conversa%20gratuita." class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Vi sua página e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
-  </div>
+  <a class="wa-float" id="wa-float" href="https://wa.me/5512997304566?text=Oi%20Agatha!%20Vi%20sua%20p%C3%A1gina%20e%20quero%20agendar%20minha%20conversa%20gratuita." data-message="Oi Agatha! Vi sua página e quero agendar minha conversa gratuita." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" hidden>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.17c-.24.68-1.42 1.31-1.95 1.35-.5.05-.98.23-3.3-.69-2.78-1.1-4.55-3.95-4.69-4.13-.14-.18-1.12-1.49-1.12-2.84s.71-2.02.96-2.29c.25-.28.55-.35.73-.35h.52c.17 0 .4-.06.62.48.24.57.8 1.97.87 2.11.07.14.12.31.02.49-.09.18-.14.29-.28.45l-.42.49c-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.37.28.14.44.12.6-.07.17-.19.69-.8.88-1.08.18-.28.37-.23.62-.14.25.09 1.6.76 1.87.89.28.14.46.21.53.32.07.12.07.66-.17 1.34z"/></svg>
+  </a>
 
   <script src="js/script.js"></script>
 </body>
