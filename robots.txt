@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hugodenaridev.github.io/coaching-landing-page/sitemap.xml
