@@ -1,8 +1,10 @@
 # Landing Page de Coaching de Inteligência Emocional: Implementation Plan
 
+> **Plano histórico (12/08/2026), revisado em 02/11/2026.** Plano de implementação da primeira versão (página única). O site atual foi reestruturado (várias páginas, quiz e solicitação); os fatos oficiais vigentes estão em [`docs/README.md`](../../README.md). Os textos de exemplo abaixo foram corrigidos nas informações comerciais e profissionais (valores, credenciais, formato da oferta e caminho de contratação); o restante é histórico.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build a single static HTML/CSS/JS landing page selling Agatha Vidal's emotional intelligence coaching service, driving visitors to book a free intro session via WhatsApp.
+**Goal:** Build a single static HTML/CSS/JS landing page presenting Agatha Vidal's coaching/mentoring service (first version: emotional intelligence coaching; today: individual personal-development mentoring), driving visitors to contact her via WhatsApp (today: via the quiz).
 
 **Architecture:** One `index.html` with nine sections in a fixed scroll order, one `css/style.css` for all styling (design tokens + section styles), one `js/script.js` for scroll-reveal, the ambient glow animation, and WhatsApp link construction. No framework, no build step, no backend.
 
@@ -41,7 +43,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agatha Vidal | Coaching de Inteligência Emocional</title>
-  <meta name="description" content="Coaching de inteligência emocional com o método CIS (Febracis). Agende sua conversa gratuita com Agatha Vidal.">
+  <meta name="description" content="Mentoria individual e desenvolvimento pessoal com Agatha Vidal, com formação em coaching pela Febracis.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
@@ -187,8 +189,8 @@ git commit -m "Scaffold landing page skeleton with design tokens"
     </div>
     <p class="eyebrow">Coaching de Inteligência Emocional</p>
     <h1>Você não precisa sentir menos. Precisa decidir melhor com o que sente.</h1>
-    <p class="hero-subhead">Coaching de inteligência emocional com o método CIS (Febracis), unindo fé, neurociência e hábitos para você viver de forma mais intencional.</p>
-    <a href="#" class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Vi sua landing page e quero agendar minha conversa gratuita sobre coaching de inteligência emocional.">Agendar minha conversa gratuita</a>
+    <p class="hero-subhead">Mentoria individual de desenvolvimento pessoal, unindo fé e hábitos para você viver de forma mais intencional.</p>
+    <a href="#" class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Vi sua página e gostaria de tirar uma dúvida.">Fazer o quiz da mentoria</a>
   </div>
 </section>
 ```
@@ -280,7 +282,7 @@ git commit -m "Add hero section"
 ```html
 <section id="credibility">
   <div class="section-inner credibility-inner">
-    <p>Coach formada pela Febracis <span class="dot">·</span> Método de Paulo Vieira (CIS) <span class="dot">·</span> <a href="https://www.instagram.com/euagathavidal" target="_blank" rel="noopener">@euagathavidal</a></p>
+    <p>Coach formada pela Febracis <span class="dot">·</span> <a href="https://www.instagram.com/euagathavidal" target="_blank" rel="noopener">@euagathavidal</a></p>
   </div>
   <hr class="divider">
 </section>
@@ -416,7 +418,7 @@ git commit -m "Add problem section"
       </div>
       <div class="method-card">
         <h3>Neurociência</h3>
-        <p>Entenda o que acontece no seu cérebro antes de tentar mudar o comportamento.</p>
+        <p>Um tema que a Ágatha estuda (sem titulação em Neurociência): como hábitos e comportamento se formam.</p>
       </div>
       <div class="method-card">
         <h3>Hábitos</h3>
@@ -501,8 +503,8 @@ git commit -m "Add method section with four pillars"
     <div class="about-photo about-photo--placeholder" role="img" aria-label="Foto da Agatha Vidal (a substituir por uma foto em alta resolução)"></div>
     <div>
       <h2>Sobre a Agatha</h2>
-      <p>Eu sou a Agatha Vidal, coach formada pela Febracis, aplicando o método de Paulo Vieira (Coaching Integral Sistêmico) nas minhas sessões. Acredito que inteligência emocional não é sentir menos, é decidir melhor.</p>
-      <p>Minha missão é te ajudar a construir uma vida mais intencional, unindo fé, neurociência e hábitos no dia a dia.</p>
+      <p>Eu sou a Agatha Vidal, coach formada pela Febracis. Acredito que inteligência emocional não é sentir menos, é decidir melhor.</p>
+      <p>Minha missão é te ajudar a construir uma vida mais intencional, unindo fé e hábitos no dia a dia.</p>
     </div>
   </div>
 </section>
@@ -576,7 +578,7 @@ git commit -m "Add about section"
       <li>
         <span class="journey-number">1</span>
         <div>
-          <h3>Conversa gratuita</h3>
+          <h3>Quiz e solicitação</h3>
           <p>Entendemos juntas onde você está e onde quer chegar.</p>
         </div>
       </li>
@@ -680,10 +682,10 @@ git commit -m "Add journey section"
 ```html
 <section id="offer">
   <div class="section-inner offer-inner">
-    <h2>Programa de Coaching de Inteligência Emocional</h2>
-    <p class="offer-detail">12 sessões individuais, 100% online</p>
-    <p class="offer-price">R$ 6.000 <span>(equivalente a R$500 por sessão)</span></p>
-    <a href="#" class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Quero saber mais sobre o programa de 12 sessões de coaching de inteligência emocional.">Quero agendar minha conversa gratuita</a>
+    <h2>Mentoria individual</h2>
+    <p class="offer-detail">12 sessões individuais, online ou presencial em São José dos Campos (SP)</p>
+    <p class="offer-price">Online: R$ 347 por sessão (R$ 4.164 pelas 12 sessões)<br>Presencial: R$ 447 por sessão (R$ 5.364 pelas 12 sessões)</p>
+    <a href="#" class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Gostaria de tirar uma dúvida sobre a mentoria.">Fazer o quiz da mentoria</a>
   </div>
 </section>
 ```
@@ -760,11 +762,11 @@ git commit -m "Add offer section"
       </details>
       <details>
         <summary>Quanto tempo dura cada sessão?</summary>
-        <p>A duração é combinada com você no início do processo, geralmente entre 50 e 60 minutos por sessão.</p>
+        <p>Cada encontro tem aproximadamente 1h30 e pode se estender pontualmente até 2 horas, semanalmente ou a cada 15 dias.</p>
       </details>
       <details>
         <summary>Como faço para agendar?</summary>
-        <p>Basta clicar em qualquer botão desta página e me chamar no WhatsApp. Vamos combinar juntas o melhor horário para a sua conversa gratuita.</p>
+        <p>O primeiro passo é responder ao quiz "A mentoria é para mim?". Ao final, você poderá conhecer as modalidades e o investimento e solicitar seu acompanhamento.</p>
       </details>
     </div>
   </div>
@@ -842,7 +844,7 @@ git commit -m "Add FAQ section"
 <section id="final-cta">
   <div class="section-inner final-cta-inner">
     <h2>Pronta para decidir melhor com o que você sente?</h2>
-    <a href="#" class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Vi sua landing page e quero agendar minha conversa gratuita sobre coaching de inteligência emocional.">Agendar minha conversa gratuita</a>
+    <a href="#" class="cta-button js-whatsapp-cta" data-message="Oi Agatha! Vi sua página e gostaria de tirar uma dúvida.">Fazer o quiz da mentoria</a>
   </div>
   <footer class="site-footer">
     <p>Agatha Vidal &middot; Coach de Inteligência Emocional &middot; <a href="https://www.instagram.com/euagathavidal" target="_blank" rel="noopener">@euagathavidal</a></p>
@@ -942,7 +944,7 @@ if ('IntersectionObserver' in window && revealTargets.length) {
 const WHATSAPP_NUMBER = '5512997304566';
 
 document.querySelectorAll('.js-whatsapp-cta').forEach((link) => {
-  const message = link.dataset.message || 'Oi Agatha! Quero agendar minha conversa gratuita.';
+  const message = link.dataset.message || 'Oi Agatha! Gostaria de tirar uma dúvida.';
   link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   link.target = '_blank';
   link.rel = 'noopener';
@@ -1045,12 +1047,12 @@ git commit -m "Responsive and accessibility fixes"
 
 Open `index.html` in a browser and confirm, in order:
 1. Hero: peach-to-cream gradient, pulsing glow behind photo placeholder, Fraunces headline, terracota CTA pill button.
-2. Credibility strip: Febracis / Paulo Vieira (CIS) / @euagathavidal, single centered line.
+2. Credibility strip: Febracis / @euagathavidal, single centered line.
 3. Problem: three pain points with terracota dot markers.
 4. Método: four cards (Fé, Neurociência, Hábitos, Decisão consciente) on peach background.
 5. Sobre a Agatha: photo placeholder + two-paragraph first-person bio.
 6. Como funciona: three numbered steps in order (1, 2, 3).
-7. Oferta: R$ 6.000 / 12 sessões / R$500 per session equivalent, CTA button.
+7. Oferta: 12 sessões; valores oficiais em docs/README.md (Online R$ 347 por sessão; Presencial R$ 447 por sessão), CTA button.
 8. FAQ: four expandable questions, native accordion behavior.
 9. Final CTA + footer: dark brown background, CTA button, Instagram link.
 10. No testimonials section anywhere on the page.

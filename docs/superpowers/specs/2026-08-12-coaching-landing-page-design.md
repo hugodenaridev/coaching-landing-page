@@ -1,16 +1,18 @@
 # Landing page de coaching de inteligência emocional — Agatha Vidal
 
+> **Documento histórico (12/08/2026), revisado em 02/11/2026.** Descreve a primeira versão do site (página única de "coaching de inteligência emocional"). O site atual tem várias páginas e o quiz "A mentoria é para mim?"; os fatos oficiais vigentes estão em [`docs/README.md`](../../README.md). As informações comerciais e profissionais abaixo foram corrigidas; o restante é registro histórico e não descreve o site atual.
+
 ## Objetivo
 
-Página única (single page) para vender o serviço de coaching de inteligência emocional da Agatha. Objetivo de conversão: levar a visitante a agendar uma conversa gratuita pelo WhatsApp.
+Página única (single page) para vender o serviço de coaching de inteligência emocional da Agatha. Objetivo de conversão (versão inicial): levar a visitante ao contato pelo WhatsApp. No site atual, o caminho é o quiz "A mentoria é para mim?" seguido da solicitação (ver `docs/README.md`).
 
 ## Contexto e fatos do negócio
 
-- Nicho: coaching de inteligência emocional.
-- Credencial: coach formada pela Febracis, aplica o método de Paulo Vieira (Coaching Integral Sistêmico / CIS) nas sessões. Essa credencial é um forte sinal de autoridade no mercado brasileiro de coaching e deve aparecer perto do topo da página.
-- Instagram de referência: [@euagathavidal](https://www.instagram.com/euagathavidal). Bio atual: "Construa uma vida intencional! Transforme sua forma de pensar, escolher e viver. Fé • Neurociência • Hábitos". O tom da landing page segue essa mesma voz — inteligência emocional é a oferta específica dentro desse universo, não uma marca nova e desconectada.
-- Oferta: 12 sessões individuais online, R$ 6.000 (equivalente a ~R$ 500/sessão).
-- Sem depoimentos de clientes disponíveis ainda. A seção de prova social não deve inventar nenhum depoimento; a credencial Febracis/Paulo Vieira faz esse papel por enquanto.
+- Nicho (posicionamento atual): desenvolvimento pessoal e mentoria individual. (A versão inicial usava "coaching de inteligência emocional".)
+- Credenciais confirmadas: formação em coaching pela Febracis; engenharia pela UNIFEI; MBA em Marketing Digital pela Conquer Business School; mais de cinco anos na Unilever. (Corrigido: a versão inicial afirmava que ela aplicava, nas sessões, um método de terceiros; isso não faz parte do posicionamento atual e não deve ser afirmado.) A credencial Febracis é um forte sinal de autoridade no mercado brasileiro de coaching e deve aparecer perto do topo da página.
+- Instagram de referência: [@euagathavidal](https://www.instagram.com/euagathavidal). Bio atual: "Construa uma vida intencional! Transforme sua forma de pensar, escolher e viver. Fé • Neurociência • Hábitos". O tom da landing page segue essa mesma voz — a oferta atual é a mentoria individual de desenvolvimento pessoal dentro desse universo, não uma marca nova e desconectada (a versão inicial falava em inteligência emocional). Atenção: "Neurociência" na bio é um tema de estudo; a Ágatha **não** tem pós-graduação nem especialização concluída em Neurociência, e não deve ser apresentada com essa titulação.
+- Oferta vigente: 12 sessões individuais, online ou presencial em São José dos Campos (SP). Online: R$ 347 por sessão (R$ 4.164 pelas 12 sessões). Presencial: R$ 447 por sessão (R$ 5.364 pelas 12 sessões). Valores anteriores à revisão de 02/11/2026 estão obsoletos e não devem ser usados.
+- Sem depoimentos de clientes disponíveis ainda. A seção de prova social não deve inventar nenhum depoimento; a credencial Febracis faz esse papel por enquanto.
 - Número de WhatsApp para o CTA: 5512997304566.
 - Hospedagem ainda não definida — o site deve ser construído como projeto estático independente, fácil de publicar depois em qualquer serviço (Vercel, Netlify, GitHub Pages etc.).
 
@@ -45,15 +47,15 @@ Aprovado via comparação visual com o conceito alternativo "Bússola Interior".
 
 ## Estrutura da página (aprovada)
 
-1. **Hero** — retrato, headline focada em transformação, subheadline (inteligência emocional + método CIS/Febracis), CTA primário para WhatsApp.
-2. **Faixa de credibilidade** — Febracis · método Paulo Vieira (CIS) · @euagathavidal.
+1. **Hero** — retrato, headline focada em transformação, subheadline (versão inicial: inteligência emocional + Febracis; hoje: desenvolvimento pessoal e mentoria individual), CTA primário (na versão inicial, WhatsApp; hoje, o quiz).
+2. **Faixa de credibilidade** — Febracis · @euagathavidal.
 3. **O problema** — empatia, dores nomeadas com a voz do público (reagir no automático, decisões travadas pela emoção, sensação de "fazer tudo certo" e continuar preso).
-4. **O método** — 4 pilares no estilo da bio do Instagram: Fé · Neurociência · Hábitos · Decisão consciente.
+4. **O método** — 4 pilares no estilo da bio do Instagram: Fé · Neurociência · Hábitos · Decisão consciente ("Neurociência" = tema de estudo, sem titulação; ver nota acima).
 5. **Sobre a Agatha** — bio curta, pessoal, credenciais, foto.
-6. **Como funciona** — jornada numerada (sequência real, por isso a numeração é justificada): conversa gratuita → diagnóstico e plano → 12 sessões individuais online.
-7. **Oferta** — 12 sessões individuais online, R$ 6.000, CTA novamente.
+6. **Como funciona** — jornada numerada (sequência real, por isso a numeração é justificada). Versão atual: quiz → solicitação → orientações sobre disponibilidade e próximos passos → 12 sessões individuais (online ou presencial).
+7. **Oferta** — 12 sessões individuais; valores oficiais em `docs/README.md` (hoje exibidos apenas no quiz, na etapa comercial).
 8. **Perguntas frequentes** — funciona online? preciso ter um "problema grande"? quanto tempo dura? como agendo?
-9. **CTA final + rodapé** — WhatsApp CTA repetido, link do Instagram.
+9. **CTA final + rodapé** — CTA repetido (hoje, para o quiz), link do Instagram.
 
 Seção de depoimentos **intencionalmente omitida** por enquanto — o layout deve ficar fácil de encaixar essa seção depois, quando houver depoimentos reais.
 

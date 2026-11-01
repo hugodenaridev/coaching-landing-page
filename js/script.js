@@ -25,60 +25,6 @@
     });
   }
 
-  // ---------- Investimento (página Mentoria) ----------
-  function el(tag, className, text) {
-    var node = document.createElement(tag);
-    if (className) node.className = className;
-    if (text) node.textContent = text;
-    return node;
-  }
-
-  function line(label, value, className) {
-    var item = el('li', className);
-    item.appendChild(document.createTextNode(label + ' '));
-    item.appendChild(el('strong', null, value));
-    item.appendChild(document.createTextNode('.'));
-    return item;
-  }
-
-  function renderPricing() {
-    var pricing = CONFIG && CONFIG.pricing;
-    var plansBox = document.getElementById('plans');
-    var fallback = document.getElementById('pricing-fallback');
-    if (!pricing || !plansBox) return;
-
-    if (!pricing.enabled) return; // mantém o bloco discreto padrão
-
-    pricing.plans.forEach(function (plan) {
-      var card = el('article', 'plan');
-      card.appendChild(el('p', 'plan-kicker', 'Modalidade'));
-      card.appendChild(el('h3', null, plan.name));
-
-      var list = el('ul', 'plan-lines');
-      list.appendChild(el('li', null, plan.sessions));
-      list.appendChild(line('Valor por sessão:', plan.perSession));
-      list.appendChild(line('Valor total:', plan.total));
-      list.appendChild(line('Valor à vista com 5% de desconto:', plan.cash, 'plan-cash'));
-
-      var inst = el('li');
-      inst.appendChild(document.createTextNode('Parcelamento: ' + plan.installments));
-      list.appendChild(inst);
-      card.appendChild(list);
-
-      var cta = el('a', 'btn btn--dark btn--block', plan.cta);
-      cta.setAttribute('data-wa', plan.message);
-      card.appendChild(cta);
-
-      plansBox.appendChild(card);
-    });
-
-    plansBox.hidden = false;
-    var extra = document.getElementById('pricing-extra');
-    if (extra) extra.hidden = false;
-    if (fallback) fallback.hidden = true;
-  }
-
-  renderPricing();
   applyContactLinks(document);
 
   // ---------- Scroll reveal ----------
