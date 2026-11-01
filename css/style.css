@@ -522,7 +522,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 /* Foto com posição própria por imagem (enquadramento responsivo) */
-.pos-notebook { object-position: 50% 20%; }
 .pos-about { object-position: 50% 14%; }
 .pos-mentoria { object-position: 50% 18%; }
 .pos-contact { object-position: 50% 14%; }
@@ -700,6 +699,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .faq-list .answer { padding: 0 4px 24px; }
 .faq-list .answer p { margin: 0; color: var(--ink-soft); font-size: 16px; max-width: 640px; }
+.faq-list .answer p + p { margin-top: 1em; }
 
 /* ---------- Contato ---------- */
 
