@@ -858,8 +858,8 @@
     stageEl.appendChild(pathHeading(P.exploreTitle));
     var links = el('div', 'quiz-explore');
     if (CFG.instagramUrl) links.appendChild(linkBtn(P.instagramLabel, CFG.instagramUrl, 'btn--dark', true));
-    links.appendChild(linkBtn('Sobre mim', 'sobre-mim.html', 'btn--ghost', false));
-    links.appendChild(linkBtn('Perguntas frequentes', 'perguntas-frequentes.html', 'btn--ghost', false));
+    links.appendChild(linkBtn('Sobre mim', 'sobre-mim', 'btn--ghost', false));
+    links.appendChild(linkBtn('Perguntas frequentes', 'perguntas-frequentes', 'btn--ghost', false));
     stageEl.appendChild(links);
     stageEl.appendChild(pathActions(false));
   }
@@ -943,7 +943,7 @@
 
     var purpose = el('p', 'quiz-lead', P.requestPurpose + ' ');
     var pl = el('a', null, P.privacyLabel);
-    pl.href = 'politica-de-privacidade.html';
+    pl.href = 'politica-de-privacidade';
     pl.target = '_blank';
     pl.rel = 'noopener';
     purpose.appendChild(pl);
